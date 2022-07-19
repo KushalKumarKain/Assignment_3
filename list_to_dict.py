@@ -1,17 +1,15 @@
-# lst = [ ] 
-# n = int(input("Enter number of elements : ")) 
-  
-# for i in range(0, n): 
-#     ele = [input(), int(input())] 
-#     lst.append(ele) 
-      
-# print(lst)
-
 Lst = [] 
-maxLengthList = int(input("NO of inputs"))
+maxLengthList = int(input("NO of inputs : "))
 while len(Lst) < maxLengthList:
     item = input("Enter your Item to the List: ")
     Lst.append(item)
     print(Lst)
-print("That's your Shopping List")
+print("That's your List")
 print(Lst)
+
+
+def Convert(Lst):
+    res_dct = {Lst[i]: Lst[i + 1] for i in range(0, len(Lst), 2)}
+    return res_dct
+print("Your converted List to Dictionary is : ")
+print(Convert(Lst))
